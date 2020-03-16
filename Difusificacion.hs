@@ -10,7 +10,7 @@ difusificar xi (x1, y1) (x2, y2) = (((xi - x1) * (y2 - y1)) / (x2 - x1)) + y1
 valorSuperior grupo val = (filter (\x -> val <= fst x) (snd grupo)) !! 0
 
 -- De una etiqueta difusa obtiene el valor inferior más cercano al valor buscado
-valorInferior grupo val = last (filter (\x -> val > fst x) (snd grupo))
+valorInferior grupo val = last (filter (\x -> val >= fst x) (snd grupo))
 
 -- Difusifica un valor dentro de una variable
 -- val = 50, variable = "HI" -> [("poco",0.0),("regular",0.7826086956521738),("mucho",0.0)]

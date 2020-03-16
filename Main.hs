@@ -3,6 +3,7 @@ module Main where
 import Data.List.Split
 import qualified Data.Set as Set
 import Difusificacion
+import Desdifusificacion
 
 -- Convierte un string a una lista de tuplas de dobles
 -- "[(100, 0), (50, 1)]" -> [(100.0, 0.0), (50.0, 1.0)]
