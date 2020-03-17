@@ -4,7 +4,10 @@ import Data.Maybe
 
 -- Toma un valor xi y busca un valor en 'y' usando triangulos semejantes entre
 -- (x1, y1) y (x2, y2)
-difusificar xi (x1, y1) (x2, y2) = (((xi - x1) * (y2 - y1)) / (x2 - x1)) + y1
+--difusificar xi (x1, y1) (x2, y2) = (((xi - x1) * (y2 - y1)) / (x2 - x1)) + y1
+difusificar xi (x1, y1) (x2, y2)
+  | x2 == x1 = y1
+  | otherwise = (((xi - x1) * (y2 - y1)) / (x2 - x1)) + y1
 
 -- De una etiqueta difusa obtiene el valor superior más cercano al valor buscado
 valorSuperior grupo val = (filter (\x -> val <= fst x) (snd grupo)) !! 0
