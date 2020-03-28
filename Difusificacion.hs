@@ -20,4 +20,6 @@ valorInferior grupo val = last (filter (\x -> val >= fst x) (snd grupo))
 difusificarValor :: Double -> [(String, [(Double, Double)])] -> [(String, Double)]
 difusificarValor val variable = map (\x -> (fst x, difusificar val (valorInferior x val) (valorSuperior x val))) variable
 
+difusificarVariables valores variables lineas = [difusificarValor x y | (x, y) <- zip valores (map (\x -> obtenerGrupos x lineas) variables)]
+
 obtenerGrupos llave lineas = (maybeToList (lookup llave lineas)) !! 0

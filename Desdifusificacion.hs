@@ -30,4 +30,4 @@ centroide grafica = sum [x * y | (x, y) <- zip grafica [0,0.5..100]] / sum grafi
 -- Params:
 -- rendimiento -> Lista de conjuntos difusos de la variable de salida
 -- cortes -> Lista de valores difusos para cada grupo [0, 0.15, 0.5, 1]
-desdifusificar rendimiento cortes = centroide $ combinarGraficas $ rendimiento cortes
+desdifusificar rendimiento cortes = centroide $ combinarGraficas $ generarGraficas rendimiento cortes
